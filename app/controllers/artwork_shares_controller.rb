@@ -1,9 +1,5 @@
 class ArtworkSharesController < ApplicationController
 
-	def index
-
-	end
-
 	def create
 		artwork_share = ArtworkShare.new(artwork_shares_params)
 		if artwork_share.save
