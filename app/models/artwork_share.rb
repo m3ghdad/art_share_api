@@ -15,8 +15,9 @@ class ArtworkShare < ApplicationRecord
 	belongs_to :viewer,
 		primary_key: :id, 
 		foreign_key: :viewer_id,
+		dependent: :destroy,
 		class_name: 'User'
-		
+
 	belongs_to :artwork,
 		primary_key: :id,
 		foreign_key: :artwork_id,
