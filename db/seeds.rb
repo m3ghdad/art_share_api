@@ -17,3 +17,5 @@ artwork1 = Artwork.create!(title: 'Barca', image_url: 'google.com', artist_id: u
 artwork2 = Artwork.create!(title: 'France', image_url: 'google1.com', artist_id: user2.id)
 ArtworkShare.create!(artwork_id: artwork1.id, viewer_id: user2.id)
 ArtworkShare.create!(artwork_id: artwork2.id, viewer_id: user2.id)
+comment1 = Comment.create!(body: 'great!', author_id: user1.id, artwork_id: artwork1.id)
+comment2 = Comment.create!(body: 'another great one', author_id: user2.id, artwork_id: artwork2.id)
